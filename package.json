@@ -5,6 +5,8 @@
   "main": "index.js",
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "connect-session-knex": "^1.4.0",
+    "connect-store": "^2.0.7",
     "express": "^4.17.1",
     "express-session": "^1.16.1",
     "helmet": "^3.18.0",

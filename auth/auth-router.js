@@ -27,7 +27,10 @@ router.post('/login', (req, res) => {
     .first()
     .then(user => {
       if (user && bcrypt.compareSync(password, user.password)) {
-        res.status(200).json({ message: `Welcome ${user.username}!` });
+        req.session.username = user.username;
+        res.status(200).json({
+           message: `Welcome ${user.username} , dubs will win the finals!`,
+           });
       } else {
         res.status(401).json({ message: 'You Shall Not Pass' });
       }
