@@ -40,4 +40,11 @@ router.post('/login', (req, res) => {
     });
 });
 
+router.delete('/', (req, res) => {
+  if(req.session) {
+    req.session.destroy();
+  }
+  res.status(200).json({ message: 'peace out cuh' });
+});
+
 module.exports = router;
